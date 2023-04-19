@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <link rel="shortcut icon" href="https://w7.pngwing.com/pngs/225/560/png-transparent-computer-icons-scientific-calculator-free-calculator-files-electronics-computer-calculator.png">
     <title>Calculadora</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
-    />
+    <!-- Bootstrap CSS v5.3 y JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -40,10 +37,62 @@
         </div>
       </nav>
     </header>
-    <main></main>
-    <footer>
-      <!-- place footer here -->
-    </footer>
+    <main>
+      <container>
+        <h1>
+            Calculemos
+        </h1>
+    </container>
+    <container>
+		<div class="container">
+			<h3>Calculadora TeLo Team 4</h3>
+				<div class="row justify-content-center">
+					<div class="col-md-6 mt-5">
+						<div class="card">
+							<div class="card-body">
+								<form>
+									<div class="form-group">
+										<input type="text" class="form-control" id="result" readonly>
+									</div>
+									<div class="form-group">
+										<button type="button" class="btn btn-secondary btn-block" onclick="clearResult()">C</button>
+										<button type="button" class="btn btn-secondary btn-block" onclick="backspace()">CE</button>
+										<button type="button" class="btn btn-secondary btn-block" onclick="insert('+')">+</button>
+										<button type="button" class="btn btn-secondary btn-block" onclick="insert('-')">-</button>
+									</div>
+									<div class="form-group">
+										<button type="button" class="btn btn-secondary btn-block" onclick="insert('7')">7</button>
+										<button type="button" class="btn btn-secondary btn-block" onclick="insert('8')">8</button>
+										<button type="button" class="btn btn-secondary btn-block" onclick="insert('9')">9</button>
+										<button type="button" class="btn btn-secondary btn-block" onclick="insert('*')">*</button>
+									</div>
+									<div class="form-group">
+										<button type="button" class="btn btn-secondary btn-block" onclick="insert('4')">4</button>
+										<button type="button" class="btn btn-secondary btn-block" onclick="insert('5')">5</button>
+										<button type="button" class="btn btn-secondary btn-block" onclick="insert('6')">6</button>
+										<button type="button" class="btn btn-secondary btn-block" onclick="insert('/')">/</button>
+									</div>
+									<div class="form-group">
+										<button type="button" class="btn btn-secondary btn-block" onclick="insert('1')">1</button>
+										<button type="button" class="btn btn-secondary btn-block" onclick="insert('2')">2</button>
+										<button type="button" class="btn btn-secondary btn-block" onclick="insert('3')">3</button>
+										<button type="button" class="btn btn-secondary btn-block" onclick="insert('.')">.</button>
+                                		<button type="button" class="btn btn-secondary btn-block" onclick="calculate()">=</button>
+                            		</div>
+                        		</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</container>
+    </main>
+  <div class="footer-basic">
+      <footer>
+        <div class="social"><a href="data:image/jpeg;base64,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"><i class="icon-social-instagram"></i>  
+        <p class="copyright">Equipo Programadores N°4 © 2023</p> 
+      </footer>
+        </div>
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -51,11 +100,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
